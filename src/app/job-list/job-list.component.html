@@ -1,0 +1,10 @@
+<h3 id="exp" style="margin-top:20px;">
+  <strong>Professional Experience</strong>
+</h3>
+<hr style="background-color:black;">
+<div class="container">
+  <app-job 
+    *ngFor="let job of jobs"
+    [job-element]="job">
+  </app-job>
+</div>
