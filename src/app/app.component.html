@@ -9,23 +9,22 @@
         </a>
         <div class="collapse navbar-collapse" id="navbarNav1">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
+                <li class="nav-item" [ngClass]="{'active' : activeSection==='exp'}">
                     <a class="nav-link" href="#exp">Professional Experience <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link">Education</a>
+                <li class="nav-item" [ngClass]="{'active' : activeSection==='edu'}">
+                    <a class="nav-link" href="#edu">Education</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link">Projects</a>
+                <li class="nav-item" [ngClass]="{'active' : activeSection==='pro'}">
+                    <a class="nav-link" href="#pro">Projects</a>
                 </li>
-                 <li class="nav-item">
-                    <a class="nav-link">About</a>
+                 <li class="nav-item" [ngClass]="{'active' : activeSection==='abo'}">
+                    <a class="nav-link" href="#abo">About</a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
-<div class="container" style="margin-top:70px;">
-    <app-job-list></app-job-list>
+<div class="container">
+    <router-outlet></router-outlet>
 </div>
-

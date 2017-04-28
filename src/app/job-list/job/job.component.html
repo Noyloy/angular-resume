@@ -1,16 +1,10 @@
-<!--Card Light-->
 <div class="card" style="margin-top:15px;">
-    <!--Card content-->
     <div class="card-block">
-        <!--Title-->
-        <h4 class="card-title"><strong>{{jobElement.company_name}}, {{jobElement.job_title}}</strong></h4>
-        <h5>{{jobElement.start_time|date:'MMM yyyy'}} - {{jobElement.end_time==null?'Now':jobElement.end_time|date:'MMM yyyy'}}</h5>
+        <h4 class="card-title"><strong>{{jobElement | job:'head'}}</strong></h4>
+        <h5>{{jobElement | job:'time'}}</h5>
         <hr>
-        <!--Text-->
         <div *ngFor="let desc of jobElement.desc_list" class="card-text" style="padding-bottom:10px;" >
-          	&#8226; {{desc}}
+          	{{jobElement | job:'desc':desc}}
         </div>
     </div>
-    <!--/.Card content-->
 </div>
-<!--/.Card Light-->

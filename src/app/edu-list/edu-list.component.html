@@ -1,0 +1,10 @@
+<h3 id="edu">
+  <strong>Education</strong>
+</h3>
+<hr style="background-color:black;">
+<div class="container" style="margin-bottom:30px;">
+  <app-edu-item
+    *ngFor="let edu of edus"
+    [edu-element]="edu">
+  </app-edu-item>
+</div>
