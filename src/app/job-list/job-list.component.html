@@ -4,7 +4,7 @@
 <hr style="background-color:black;">
 <div class="container" style="margin-bottom:30px;">
   <app-job 
-    *ngFor="let job of jobs"
+    *ngFor="let job of items | async"
     [job-element]="job">
   </app-job>
 </div>

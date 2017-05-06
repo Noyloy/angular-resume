@@ -4,7 +4,7 @@
 <hr style="background-color:black;">
 <div class="container" style="margin-bottom:30px;">
   <app-edu-item
-    *ngFor="let edu of edus"
+    *ngFor="let edu of items | async"
     [edu-element]="edu">
   </app-edu-item>
 </div>

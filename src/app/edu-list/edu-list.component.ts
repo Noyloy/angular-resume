@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Edu } from "../edu-list/edu.model";
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-edu-list',
@@ -7,22 +8,15 @@ import { Edu } from "../edu-list/edu.model";
   styleUrls: ['./edu-list.component.css']
 })
 export class EduListComponent implements OnInit {
-  edus:Edu[] = [
-    new Edu(
-      'B.Sc Software Engineering',
-      'Afeka collage of engineering',
-      'Tel – Aviv',
-      new Date('2016-01-01'),
-      'Specialization: mobile applications.'),
+  items: FirebaseListObservable<Edu[]>;
 
-    new Edu(
-      'Full high-school matriculation diploma',
-      'Ami Asaf high-school',
-      'Beit Berl',
-      new Date('2006-01-01'),
-      'Extended Professions: Computer Science [5 units] and Biology [5 units].')
-  ];
-  constructor() { }
+    constructor(db: AngularFireDatabase) { 
+    this.items = db.list('education');
+    this.items.subscribe(
+      function(snap){
+        this.items = snap;
+      });
+  }
 
   ngOnInit() {
   }

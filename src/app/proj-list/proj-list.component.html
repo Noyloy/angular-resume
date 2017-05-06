@@ -4,7 +4,7 @@
 <hr style="background-color:black;">
 <div class="container" style="margin-bottom:30px;">
   <div class="row">
-    <div class="col-lg-4 col-sm-6" *ngFor="let proj of projects">
+    <div class="col-lg-4 col-sm-6" *ngFor="let proj of items | async">
       <app-proj-item [project-element]="proj">
       </app-proj-item>
     </div>

@@ -16,9 +16,17 @@ import { ProjListComponent } from './proj-list/proj-list.component';
 import { ProjItemComponent } from './proj-list/proj-item/proj-item.component';
 import { ProjectPipe } from './pipes/project.pipe';
 
+import { AngularFireDatabaseModule } from "angularfire2/database";
+import { AngularFireModule } from 'angularfire2';
+
+import { environment } from '../environments/environment';
+
+
 const appRoutes:Routes = [
   {path:'', component:HomeComponent}
 ];
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +45,9 @@ const appRoutes:Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]
