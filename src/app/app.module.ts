@@ -12,6 +12,9 @@ import { EduListComponent } from "./edu-list/edu-list.component";
 import { JobPipe } from './pipes/job.pipe';
 import { EduPipe } from './pipes/edu.pipe';
 import { HomeComponent } from './home/home.component';
+import { ProjListComponent } from './proj-list/proj-list.component';
+import { ProjItemComponent } from './proj-list/proj-item/proj-item.component';
+import { ProjectPipe } from './pipes/project.pipe';
 
 const appRoutes:Routes = [
   {path:'', component:HomeComponent}
@@ -25,7 +28,10 @@ const appRoutes:Routes = [
     EduListComponent,
     JobPipe,
     EduPipe,
-    HomeComponent
+    HomeComponent,
+    ProjListComponent,
+    ProjItemComponent,
+    ProjectPipe
   ],
   imports: [
     BrowserModule,

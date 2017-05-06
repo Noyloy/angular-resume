@@ -17,7 +17,8 @@ export class JobListComponent implements OnInit {
        'Using Team Foundation Server source control.',
        'In charge of multiple ASP.NET and WCF services.',
        'Close integration with Microsoft SQL Server 2014 Database.'
-      ]),
+      ],
+      'https://lh6.ggpht.com/HQ2SuPYnDqm0fzqgf6iiBMJCqDr5CjY6ULbBNSZLSUPgaVqm14pagGRl3wt4xW0PzMc=w300-rw'),
 
     new Job(
       'Map-IT',
@@ -26,7 +27,8 @@ export class JobListComponent implements OnInit {
       ['Execution of phone calls, sms & emails.',
        'Uploading of Camera taken pictures to Server.',
        'Using Google maps GPS & Background Services.'
-      ]),
+      ],
+      'assets/img/mapitlogo.png'),
 
     new Job(
       'Map-IT',
@@ -36,7 +38,8 @@ export class JobListComponent implements OnInit {
        'Close integration with Microsoft SQL Server 2012 Database.',
        'Automated sending of emails formatted in functioning html.',
        'Implementation of versatile Web Services and notification system.'
-      ]),
+      ],
+      'assets/img/mapitlogo.png'),
 
     new Job(
       'Aplit-Soft',
@@ -47,7 +50,8 @@ export class JobListComponent implements OnInit {
        'Client side programming (JavaScript and jQuery).',
        'Google Charts integration.',
        'Improvement of GUI and overall look and feel for Android applications.'
-      ])
+      ],
+      'http://www.aplit-soft.com/img/logos/AplitLogo.ico')
   ];
   constructor() { }
 

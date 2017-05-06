@@ -1,0 +1,32 @@
+<div class="card" style="margin-top:15px;">
+  <a [href]="projEle.link" target="_blank" style="text-decoration:none;color:inherit;">
+    <div class="card-block" style="min-height:225px;">
+      <div class="row">
+        <div class="col-5">
+          <img [src]="projEle.image_path" class="img-responsive" style="width:100%;height:auto;">
+        </div>
+        <div class="col-7">
+          <div style="margin-top: calc(50% - 50px);">
+            <div class="row">
+              <div class="col-12">
+                <h4 class="card-title"><strong>{{projEle | project:'head'}}</strong></h4>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <h5>{{projEle | project:'time'}}</h5>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <h5 class="card-text col-xs-12" style="padding:10px;">
+          {{projEle | project:'desc'}}
+        </h5>
+      </div>
+    </div>
+  </a>
+</div>
