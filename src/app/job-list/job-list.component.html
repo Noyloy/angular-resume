@@ -2,9 +2,18 @@
   <strong>Professional Experience</strong>
 </h3>
 <hr style="background-color:black;">
+
+<div *ngIf="items|async; else loading;"></div>
+<ng-template #loading>
+  <div class="progress" style="height:25px;line-height:25px;width:100%;">
+    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+      aria-valuemax="100" style="width:100%;height:100%;">
+      <span style="font-size: large;">Fetching Proffessional Expierince</span>
+    </div>
+  </div>
+</ng-template>
+
 <div class="container" style="margin-bottom:30px;">
-  <app-job 
-    *ngFor="let job of items | async"
-    [job-element]="job">
+  <app-job *ngFor="let job of items | async" [job-element]="job">
   </app-job>
 </div>
