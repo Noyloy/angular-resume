@@ -14,8 +14,8 @@
 </ng-template>
 
 <div class="container" style="margin-bottom:30px;">
-  <div class="row">
-    <div class="col-lg-4 col-sm-6" *ngFor="let proj of items | async">
+  <div class="card-columns">
+    <div class="card" *ngFor="let proj of items | async">
       <app-proj-item [project-element]="proj">
       </app-proj-item>
     </div>
