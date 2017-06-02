@@ -1,12 +1,12 @@
 <div class="card-block" style="min-height:225px;">
   <div class="row">
-    <div class="col-5">
+    <div class="col-5" style="display: flex;flex-direction: column;justify-content: center;">
       <img [src]="projEle.image_path" class="img-responsive" style="width:100%;height:auto;">
     </div>
-    <div class="col-7">
-      <div style="margin-top: calc(50% - 50px);">
+    <div class="col-7" style="display: flex;flex-direction: column;justify-content: center;">
+      <div>
         <div class="row">
-          <div class="col-12">
+          <div class="col-12" >
             <h4 class="card-title"><strong>{{projEle | project:'head'}}</strong></h4>
           </div>
         </div>

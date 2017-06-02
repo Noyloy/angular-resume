@@ -15,7 +15,7 @@
 
 <div class="container" style="margin-bottom:30px;">
   <div class="card-columns">
-    <div class="card" *ngFor="let proj of items | async">
+    <div class="card" style="margin-top: 10px;" *ngFor="let proj of items | async">
       <app-proj-item [project-element]="proj">
       </app-proj-item>
     </div>
