@@ -20,6 +20,7 @@ import { AngularFireDatabaseModule } from "angularfire2/database";
 import { AngularFireModule } from 'angularfire2';
 
 import { environment } from '../environments/environment';
+import { AboutComponent } from './about/about.component';
 
 
 const appRoutes:Routes = [
@@ -39,7 +40,8 @@ const appRoutes:Routes = [
     HomeComponent,
     ProjListComponent,
     ProjItemComponent,
-    ProjectPipe
+    ProjectPipe,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

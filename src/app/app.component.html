@@ -9,6 +9,9 @@
         </a>
         <div class="collapse navbar-collapse" id="navbarNav1">
             <ul class="navbar-nav mr-auto">
+                <li class="nav-item" [ngClass]="{'active' : activeSection==='abo'}">
+                    <a class="nav-link" href="#abo">About</a>
+                </li>
                 <li class="nav-item" [ngClass]="{'active' : activeSection==='exp'}">
                     <a class="nav-link" href="#exp">Professional Experience <span class="sr-only">(current)</span></a>
                 </li>
@@ -17,9 +20,6 @@
                 </li>
                 <li class="nav-item" [ngClass]="{'active' : activeSection==='pro'}">
                     <a class="nav-link" href="#pro">Projects</a>
-                </li>
-                 <li class="nav-item" [ngClass]="{'active' : activeSection==='abo'}">
-                    <a class="nav-link" href="#abo">About</a>
                 </li>
             </ul>
         </div>

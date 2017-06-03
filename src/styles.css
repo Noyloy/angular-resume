@@ -46,3 +46,8 @@ body {
   -webkit-justify-content : center;
           justify-content : center;
 }
+
+ #map {
+        height: 400px;
+        width: 100%;
+       }
