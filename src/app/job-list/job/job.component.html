@@ -13,7 +13,10 @@
         </div>
         <hr>
         <div *ngFor="let desc of jobElement.desc_list" class="card-text" style="padding-bottom:10px;">
-            {{jobElement | job:'desc':desc}}
+            <div style="display:table-row;">
+                <div style="display:table-cell;width:10px;">•</div>
+                <div style="display:table-cell;">{{desc}}</div>
+            </div>
         </div>
     </div>
 </div>

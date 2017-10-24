@@ -32,13 +32,13 @@
         </div>
         <hr>
         <div *ngIf="about.social_list" class="row">
-          <div class="col-4"></div>
-          <div class="col-4" style="display: flex;  justify-content: space-between;">
+          <div class="col-md-4 col-sm-3 col-0"></div>
+          <div class="col-md-4 col-sm-6 col-12" style="display: flex;  justify-content: space-between;">
             <a *ngFor="let elink of about.social_list" [href]="elink.link" [ngStyle]="{'color':elink.color}" target="_blank" data-toggle="tooltip" [title]="elink.name">
             <i [class]="elink.fa_icon"  aria-hidden="true"></i>
             </a>
           </div>
-          <div class="col-4"></div>
+          <div class="col-md-4 col-sm-3 col-0"></div>
 
         </div>
               

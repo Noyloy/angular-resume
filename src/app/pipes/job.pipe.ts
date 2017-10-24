@@ -10,7 +10,6 @@ export class JobPipe implements PipeTransform {
   transform(value: Job, jobSection: string, jobDescription: string): any {
     if (jobSection.toLowerCase() === 'head') return this.getJobHeaderFormat(value);
     if (jobSection.toLowerCase() === 'time') return this.getJobTimeFormat(value);
-    if (jobSection.toLowerCase() === 'desc') return this.getJobDescriptionFormat(jobDescription);
     return null;
   }
 
@@ -24,7 +23,4 @@ export class JobPipe implements PipeTransform {
     return datePipe.transform(job.start_time, 'MMM yyyy')+ ' - ' + endTime;
   }
 
-  getJobDescriptionFormat(jobDescription: string) {
-    return '• ' + jobDescription;
-  }
 }
