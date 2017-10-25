@@ -3,21 +3,11 @@ body {
     background-repeat: repeat;
     background-position-x: 150px;
     background-position-y: 25px;
-    padding-top: 70px;
+    padding-top: 85px;
 }
 .vertical-center {
   min-height: 100%;  /* Fallback for vh unit */
-  min-height: 100vh; /* You might also want to use
-                        'height' property instead.
-                        
-                        Note that for percentage values of
-                        'height' or 'min-height' properties,
-                        the 'height' of the parent element
-                        should be specified explicitly.
-  
-                        In this case the parent of '.vertical-center'
-                        is the <body> element */
-
+  min-height: 100vh; 
   /* Make it a flex container */
   display: -webkit-box;
   display: -moz-box;
@@ -47,7 +37,12 @@ body {
           justify-content : center;
 }
 
- #map {
-        height: 400px;
-        width: 100%;
-       }
+#map {
+  height: 400px;
+  width: 100%;
+}
+
+.card-text {
+  font-size: 1.2rem !important;
+  color: #292b2c !important;
+}
