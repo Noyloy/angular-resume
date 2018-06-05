@@ -22,19 +22,26 @@ export class JobPipe implements PipeTransform {
     let endTimeStr =  job.end_time == null ? 'Present' : datePipe.transform(job.end_time, 'MMM yyyy');
     let endTime = job.end_time == null ? (new Date()) : job.end_time;
     let durationStr = this.getJobTimeDurationStr(job.start_time,endTime);
-    return datePipe.transform(job.start_time, 'MMM yyyy')+ ' - ' + endTimeStr + '(' + durationStr +')';
+    return datePipe.transform(job.start_time, 'MMM yyyy')+ ' - ' + endTimeStr + ' • ' + durationStr;
   }
 
   getJobTimeDurationStr(start_time : Date, end_time : Date) {
-    let jobDuration = end_time.getTime() - start_time.getTime();
+    let jobDuration = (new Date(end_time).getTime()) - (new Date(start_time).getTime());
     let dayInMillisec = 1000*60*60*24;
     let days = jobDuration/dayInMillisec;
-    let months = Math.ceil(days/31) % 12;
-    let years = Math.floor(((days/31)-months) /12);
-    if (months == 0 && years == 0) return "1 mos";
-    if (years == 0) return months+ " mos";
-    if (months == 0) return years + " yr";
-    return years + " yr " + months + " mos";
+    let months = Math.ceil(days/30) % 12;
+    let years = (months==0)? Math.ceil((days/30) /12):Math.floor((days/30) /12);
+
+    let monthsStr = "";
+    let yearsStr = "";
+    if (years <= 0) {
+        monthsStr = (months <= 1) ? "1 month" : months + " months";
+    }
+    else {
+      monthsStr = (months <= 0) ? "" : ( (months == 1) ? "1 month" : months + " months" );
+      yearsStr = (years == 1)? "1 year" : years + " years";
+    }
+    return new Array(yearsStr,monthsStr).join(" ");
   }
 
 }
