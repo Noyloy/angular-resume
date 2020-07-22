@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 body {
     background-image: url("./assets/img/Untitled-6.png");
     background-repeat: repeat;
