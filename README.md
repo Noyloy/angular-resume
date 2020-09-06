@@ -24,6 +24,7 @@ The Edu Model:
 ``` typescript
 export class Edu {
     constructor(
+        public image_path: string,
         public degree: string, 
         public institude: string,
         public city: string, 
