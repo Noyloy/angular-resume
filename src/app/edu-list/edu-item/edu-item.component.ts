@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./edu-item.component.css']
 })
 export class EduItemComponent implements OnInit {
-@Input('edu-element') eduElement:{degree: string, institude: string,city: string, end_time: Date, desc: string};
+@Input('edu-element') eduElement:{image_url:string, degree: string, institude: string,city: string, end_time: Date, desc: string};
   
   constructor() { 
   }
